@@ -2,7 +2,7 @@
 *   An implementation of binary search in c.
 *
 *   Binnary search is an algorithm for searching sorted arrays, as it halfs the dataset at each step
-*   it has a time complexity O(log n) making it very fast, so fast and as its time complexity is logorithmic
+*   it has a time complexity O(log n) making it very fast, and as its time complexity is logorithmic
 *   the larger the dataset the more efficient it gets. 
 *
 */
