@@ -3,13 +3,17 @@
 */
 
 #include <stdio.h>
+#include <time.h>
 
 int main()
 {
     int start, end, trav, steps = 0, index, target, buffer[1000000];
+    float timer;
+
 
     printf("Enter a number between 0 and 1,000,000:\n");
     scanf("%d", &target);
+    
 
     for (int i = 0; i <= 1000000; i++)
     {
@@ -18,6 +22,7 @@ int main()
 
     start = 0;
     end = 1000000;
+    int startTime = time(NULL);
 
     while (start <= end)
     {
@@ -30,7 +35,9 @@ int main()
         }
         else if (buffer[trav] == target)
         {
-            printf("%d found at index: %d in %d steps\n", target, trav, steps);
+            int endTime = time(NULL);
+            timer = endTime - startTime;
+            printf("%d found at index: %d in %d steps taking %f secconds\n", target, trav, steps, timer);
             break;
         }
         else
