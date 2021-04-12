@@ -5,18 +5,20 @@
 *   it has a time complexity O(log n) making it very fast, and as its time complexity is logorithmic
 *   the larger the dataset the more efficient it gets. 
 *
+*   Written by Alex Hutchison  @ AlexHutchison-Dev on GitHub.com
+*
 */
 
 #include <stdio.h>
-#include <time.h>
 
 int main()
 {
     int start = 0, end = 1000000, traverser, steps = 0, index, target, buffer[1000000];
 
     printf("Enter a number between 0 and 1,000,000:\n");
-    scanf("%d", &target);
+    scanf("%d", &target);               // Get target from user
 
+    // Fill array with numbers from 0 to 1,000,000
     for (int i = 0; i <= 1000000; i++)
     {
         buffer[i] = i;
